@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inscription - Seatseller</title>
+    <!-- CORE CSS-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <style type="text/css">
+        html,
+        body {
+            height: 100%;
+        }
+        html {
+            display: table;
+            margin: auto;
+        }
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .margin {
+            margin: 0 !important;
+        }
+
+        select {
+            font-family: inherit;
+            background-color: transparent;
+            font-size: 14px;
+            color:#000;
+            border: none;
+            border-bottom: 1px solid #000;
+        }
+    </style>
+
+</head>
+
+<body class="blue">
+
+
+<div id="login-page" class="row">
+    <div class="col s12 z-depth-6 card-panel">
+        {{ form_start(form) }}
+            <h4 class="error">{{ form_errors(form) }}</h4>
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <img src="{{ absolute_url(asset('assets/images/logo2.png')) }}" alt="" class="responsive-img valign profile-image-login">
+                    <p class="center login-form-text">Faisons du voyage la meilleure expérience pour les voyageurs</p>
+                </div>
+            </div>
+
+            <div class="row margin">
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    {{ form_widget(form.nom, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre nom', 'required': 'required' }}) }}
+                    <label for="fos_user_registration_form_nom" class="center-align">Nom </label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    {{ form_widget(form.prenom, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre nom', 'required': 'required' }}) }}
+                    <label for="fos_user_registration_form_prenom" class="center-align"> Prénom</label>
+                </div>
+            </div>
+        <div class="row margin">
+            <div class="input-field col s12">
+                <i class="mdi-social-person-outline prefix"></i>
+                {{ form_widget(form.username, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre nom  d\'utilisateur ', 'required': 'required' }}) }}
+                <label for="fos_user_registration_form_nom" class="center-align">Nom d'utilisateur</label>
+            </div>
+        </div>
+
+
+
+            <div class="row margin">
+                <div class="input-field col s6">
+                    <i class="mdi-communication-email prefix"></i>
+                    {{ form_widget(form.email, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre nom', 'required': 'required' }}) }}
+                    <label for="fos_user_registration_form_email" class="center-align">Email</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="mdi-communication-email prefix"></i>
+                    {{ form_widget(form.mob, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre numéro de téléphone', 'required': 'required' }}) }}
+                    <label for="fos_user_registration_form_mob" class="center-align">Téléphone</label>
+                </div>
+            </div>
+        <div class="row margin">
+            <div class="input-field col s12">
+                <i class="mdi-social-person-outline prefix"></i>
+                {{ form_widget(form.ville, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez votre ville ', 'required': 'required' }}) }}
+                <label for="fos_user_registration_form_ville" class="center-align">Ville</label>
+            </div>
+        </div>
+        <div class="row margin">
+            <div class="input-field col s6">
+                {{ form_widget(form.quartier, {'attr': {'class': 'browser-default input-large full-width', 'placeholder' : 'Entrez votre nom', 'required': 'required' }}) }}
+            </div>
+            <div class="input-field col s6">
+                {{ form_widget(form.commune, {'attr': {'class': 'browser-default input-large full-width', 'placeholder' : '', 'required': 'required' }}) }}
+            </div>
+        </div><br>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-lock-outline prefix"></i>
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Entrez le mot de passe', 'required': 'required' }}) }}
+                    <label for="fos_user_registration_form_password">Mot de passe</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-action-lock-outline prefix"></i>
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'input-text input-large full-width', 'placeholder' : 'Re-tapez le mot de passe', 'required': 'required' }}) }}
+                    <label for="password-again">Re-tapez le mot de passe</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s12">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    {{ form_widget(form.nomAgence, {'attr': {'class': ' validate input-text input-large full-width', 'placeholder' : 'Entrez le nom de votre entreprise', 'required': 'required' }}) }}
+                    <label for="organization_name" class="center-align">Nom de votre entreprise</label>
+                </div>
+            </div>
+            <div class="row margin">
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    {{ form_widget(form.numeroNina, {'attr': {'class': ' validate input-text input-large full-width', 'placeholder' : 'Entrez le numéro NINA', 'required': 'required' }}) }}
+                    <label for="organization_name" class="center-align">N° NINA</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="mdi-social-person-outline prefix"></i>
+                    {{ form_widget(form.nif, {'attr': {'class': ' validate input-text input-large full-width', 'placeholder' : 'Entrez le numéro NIF', 'required': 'required' }}) }}
+                    <label for="organization_name" class="center-align">NIF</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <button type="submit" class="btn waves-effect waves-light col s12">Inscrivez-vous</button>
+                </div>
+                <div class="input-field col s12">
+                    <p class="margin center medium-small sign-up">Vous avez dejà un compte ? <a href="{{ path('login') }}">Connectez-vous</a></p>
+                </div>
+            </div>
+        {{ form_rest(form) }}
+        {{ form_end(form) }}
+    </div>
+</div>
+
+
+
+
+<!-- ================================================
+  Scripts
+  ================================================ -->
+
+<!-- jQuery Library -->
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--materialize js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+
+
+
+
+
+<footer class="page-footer">
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Next Group
+            <a class="grey-text text-lighten-4 right" href="http://w3lessons.info"></a>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

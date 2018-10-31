@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Seat Seller</title>
+    <link media="all" type="text/css" href="{{ asset('assets/jquery-ui.css') }}" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{asset('assets/style.css') }}" >
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Open+Sans);
+    </style>
+    <script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery-noamd.min.js')) }}"></script>
+    <script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery.js')) }}"></script>
+    <script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery-ui.js')) }}"></script>
+
+</head>
+<body>
+
+
+<div class="GGMMM3DBGGC">
+    <div class="GGMMM3DBDFD">
+        <img src="http://cdn.seatseller.travel/images/ss_logo.jpg" stylename="GGMMM3DBEFD">
+        <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+        <div>
+                <ul style="border:1px solid #ccc;list-style:none;box-shadow: 0px 0px 12px #ccc;padding:25px">
+
+                    <li style="color:#666;"><span style="letter-spacing:5px">------------</span>Connectez vous<span style="letter-spacing:5px">------------</span></li>
+                    <div class="GGMMM3DBHFD"><div class="textbox_group">
+                            <input type="text" id="username" class="textbox_text" name="username" required="required" />
+                            <span class="textbox_bar"></span>
+                            <div class="textbox_lbl">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</div>
+                        </div>
+                    </div>
+
+                    <li>
+                        <div aria-hidden="true" style="display: none;" class="GGMMM3DBMED"></div>
+                        <div style="clear:both"></div>
+                    </li>
+                    <li>
+                        <input type="hidden" name="_target_path" value="nb_main_dasboard" />
+                        <input type="submit" class="GGMMM3DBAFD" id="signin_button" value="{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}" />
+                    <div class="small_loader" style="text-align:center;display:none"><img src="assets/images/loader-small.gif"></div>
+
+                    <div class="login_res" style="text-align:center;">
+                        {% if invalid_username is defined %}
+                            <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
+                        {% endif %}
+                    </div>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+    base_url = "http://localhost:8000/";
+
+
+</script>
+
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery.form.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/custom.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/parsley.min.js')) }}"></script>
+
+</body>
+</html>
+

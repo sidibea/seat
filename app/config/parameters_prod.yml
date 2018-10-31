@@ -1,0 +1,16 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: next-bus.net
+    database_port: null
+    database_name: nextb9og_voyage
+    database_user: nextb9og_fatou
+    database_password: sorofing
+    mailer_transport: smtp
+    mailer_host: mail.next-bus.net
+    mailer_user: noreply@next-bus.net
+    mailer_password: sorofing
+    admin_link: "http://localhost/ad/web/"
+    vitePay_api_key: Nc6nS3I1pbYojQ
+    vitePay_api_secret: 18d8250938e773b44e8e014d99baa420
+    vite_pay_callback_baseurl: "http://next-bus.net/call.php"
+    secret: 5b25ace38fa7b964005190c7be7283f137af7b4e

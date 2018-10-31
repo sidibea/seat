@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Seat Seller</title>
+        <link media="all" type="text/css" href="{{ asset('assets/jquery-ui.css') }}" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="{{asset('assets/style.css') }}" >
+        <style>
+            @import url(//fonts.googleapis.com/css?family=Open+Sans);
+        </style>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery-noamd.min.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery-ui.js')) }}"></script>
+        
+    </head>
+    <body>
+
+
+    <div class="GGMMM3DBGGC">
+        <div class="GGMMM3DBDFD">
+            <img src="http://cdn.seatseller.travel/images/ss_logo.jpg" stylename="GGMMM3DBEFD">
+            <form id="login" action="{{ path("fos_user_security_check") }}" method="POST" data-parsley-validate="">
+                <div>
+                    <ul style="border:1px solid #ccc;list-style:none;box-shadow: 0px 0px 12px #ccc;padding:25px">
+
+                        <li style="color:#666;"><span style="letter-spacing:5px">------------</span>Connectez vous<span style="letter-spacing:5px">------------</span></li>
+                        <div class="GGMMM3DBHFD"><div class="textbox_group">
+                                <input required="" name="_username" class="textbox_text" id="emailbox"  type="text">
+                                <span class="textbox_bar"></span>
+                                <div class="textbox_lbl">Nom d'utilisateur</div>
+                            </div>
+                        </div>
+                        <div class="GGMMM3DBFFD">
+                            <div class="textbox_group">
+                                <input required="" name="_password" class="textbox_text" id="password"  type="password">
+                                <span class="textbox_bar"></span>
+                                <div class="textbox_lbl">Mot de passe</div>
+                            </div>
+                        </div>
+                        <li style="margin-top:-20px; margin-bottom:15px;"> <a href="{{ path('fos_user_resetting_request') }}" class="GGMMM3DBOED">Mot de passe oublié</a> <div style="clear:both"></div> </li>
+                        <li>
+                            <div aria-hidden="true" style="display: none;" class="GGMMM3DBMED"></div>
+                            <div style="clear:both"></div>
+                        </li>
+                        <li>
+                            <input type="hidden" name="_target_path" value="nb_main_dasboard" />
+                            <button type="submit" class="GGMMM3DBAFD" id="signin_button" onclick="">Se connecter</button> </li>
+                        <li style="margin-bottom:0px;text-align:left; margin-top:25px;"> <span>Vous n'avez pas de compte ?</span> <a href="{{ path('fos_user_registration_register') }}" class="GPG0KNOCAGD">Inscrivez-vous</a> </li>
+                        <div class="small_loader" style="text-align:center;display:none"><img src="assets/images/loader-small.gif"></div>
+                        <div class="login_res" style="text-align:center;"></div>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+
+        base_url = "http://localhost:8000/";
+
+
+    </script>
+
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/jquery.form.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/custom.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('assets/js/parsley.min.js')) }}"></script>
+    
+    </body>
+</html>
